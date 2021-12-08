@@ -17,6 +17,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const images = require('../lib/images');
 const db = require('./firestore');
+const compute = require('./compute');
 
 const router = express.Router();
 
@@ -75,6 +76,10 @@ router.post(
 
     // Save the data to the database.
     const savedData = await db.create(data);
+    var imagename = savedData.id.toLowerCase();
+    const imagest= compute.createInstanceFromTemplate(imagename);
+    console.log(imagest);
+
     res.redirect(`${req.baseUrl}/${savedData.id}`);
   }
 );

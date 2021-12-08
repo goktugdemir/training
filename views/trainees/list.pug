@@ -24,10 +24,10 @@ block content
     .media
       a(href=`/trainees/${trainee.id}`)
         .media-left
-            img(src=trainee.imageUrl || "http://placekitten.com/g/128/192")
+            img("http://placekitten.com/g/128/192")
         .media-body
-          h4= trainee.title
-          p= trainee.author
+          h4= trainee.name + ` ` + trainee.surname
+          p= trainee.email
 
   if !trainees.length
     p No trainees found.

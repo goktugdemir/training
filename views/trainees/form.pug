@@ -17,21 +17,15 @@ block content
   h3 #{action} trainee
   form(method="POST", enctype="multipart/form-data")
     .form-group
-      label(for="title") Title
-      input.form-control(type="text", name="title", id="title", value=trainee.title)
+      label(for="name") Name
+      input.form-control(type="text", name="name", id="name", value=trainee.name)
     .form-group
-      label(for="author") Author
-      input.form-control(type="text", name="author", id="author", value=trainee.author)
+      label(for="surname") Surname
+      input.form-control(type="text", name="surname", id="surname", value=trainee.surname)
     .form-group
-      label(for="publishedDate") Date Published
-      input.form-control(type="text", name="publishedDate", id="publishedDate", value=trainee.publishedDate)
+      label(for="email") E-mail
+      input.form-control(type="text", name="email", id="email", value=trainee.email)
     .form-group
-      label(for="description") Description
-      input.form-control(type="text", name="description", id="description", value=trainee.description)
-    .form-group
-      label(for="image") Cover Image
-      input.form-control(type="file", name="image", id="image")
-    .form-group.hidden
-      label(for="imageUrl") Cover Image URL
-      input.form-control(type="text", name="imageUrl", id="imageUrl", value=trainee.imageUrl)
+      label(for="phone") Phone
+      input.form-control(type="text", name="phone", id="phone", value=trainee.phone)
     button.btn.btn-success(type="submit") Save

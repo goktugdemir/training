@@ -28,6 +28,7 @@ router.use(bodyParser.json());
  * Retrieve a page of trainees (up to ten at a time).
  */
 router.get('/', async (req, res) => {
+
   const {trainees, nextPageToken} = await db.list(10, req.query.pageToken);
   res.json({
     items: trainees,

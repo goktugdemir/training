@@ -27,10 +27,8 @@ block content
 
   .media
     .media-left
-      img(src=trainee.imageUrl || "http://placekitten.com/g/128/192")
+      img("http://placekitten.com/g/128/192")
     .media-body
-      h4= trainee.title
+      h4= trainee.name + ' ' + trainee.surname
         | &nbsp;
-        small= trainee.publishedDate
-      h5 By #{trainee.author||'unknown'}
-      p= trainee.description
+        small= trainee.email

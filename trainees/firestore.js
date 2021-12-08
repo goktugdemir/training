@@ -25,7 +25,7 @@ const collection = 'Trainee';
 async function list(limit, token) {
   const snapshot = await db
     .collection(collection)
-    .orderBy('title')
+    .orderBy('name')
     .startAfter(token || '')
     .limit(limit)
     .get();
